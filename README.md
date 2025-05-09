@@ -45,7 +45,9 @@ python duplicates_remove_v6.py
 ## Dependencies
 
 *   Python 3.6 or higher
-*   No external libraries are required.
+*   click (External dependency: `pip install click`)
+*   loguru (External dependency: `pip install loguru`)
+*   send2trash (External dependency: `pip install send2trash`)
 
 ## Author
 
@@ -54,3 +56,9 @@ iSams123
 ## License
 
 This project is licensed under the MIT License.
+
+## Additional Scripts
+
+*   `clean_empty_dir.py`: Recursively finds and deletes empty directories. It uses the `click` library to provide a command-line interface with options for a dry run and skipping the confirmation prompt.
+
+*   `clean_empty_dir_deepseek.py`: Recursively finds and removes empty directories. It uses `click` for the command-line interface, `loguru` for logging, and `send2trash` to send directories to the trash instead of permanently deleting them by default. It also provides options for forcing permanent deletion and increasing verbosity.
